@@ -1,10 +1,8 @@
 Taskwarrior Context Capsule
 ===========================
 
-This capsule attempts to implement Taskwarrior's
+This capsule implements Taskwarrior's
 `'Context' RFC <http://taskwarrior.org/docs/design/context.html>`_.
-
-**WARNING**: This is an alpha project; functionality is incomplete and buggy.
 
 Installation
 ------------
@@ -15,7 +13,6 @@ Installation
     pip install taskwarrior-context-capsule
 
 3. That's all!
-
 
 Use
 ---
