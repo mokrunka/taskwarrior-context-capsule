@@ -62,7 +62,10 @@ setup(
     packages=find_packages(),
     entry_points={
         'taskwarrior_capsules': [
-            'context = taskwarrior_context_capsule.capsule:Capsule',
+            'context = taskwarrior_context_capsule.capsule:Context',
+        ],
+        'taskwarrior_preprocessor_capsules': [
+            'context = taskwarrior_context_capsule.capsule:Context',
         ]
     },
 )
