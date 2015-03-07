@@ -43,11 +43,11 @@ class Tox(TestCommand):
 
 
 setup(
-    name='taskwarrior-subtask-capsule',
+    name='taskwarrior-context-capsule',
     version=version_string,
-    url='https://github.com/coddingtonbear/taskwarrior-subtask-capsule',
+    url='https://github.com/coddingtonbear/taskwarrior-context-capsule',
     description=(
-        'Easily create subtasks'
+        'Implementation of Taskwarrior\'s \'Context\' RFC.'
     ),
     author='Adam Coddington',
     author_email='me@adamcoddington.net',
@@ -62,7 +62,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'taskwarrior_capsules': [
-            'subtask = taskwarrior_subtask_capsule.capsule:Capsule',
+            'context = taskwarrior_context_capsule.capsule:Capsule',
         ]
     },
 )
