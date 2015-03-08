@@ -4,7 +4,7 @@ from setuptools.command.test import test as TestCommand
 import sys
 import uuid
 
-from taskwarrior_subtask_capsule import __version__ as version_string
+from taskwarrior_context_capsule import __version__ as version_string
 
 
 requirements_path = os.path.join(
