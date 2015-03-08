@@ -4,6 +4,8 @@ from taskwarrior_capsules.data import BUILT_IN_COMMANDS
 
 
 class Context(CommandCapsule):
+    """ Backports 'context' command Taskwarrior 2.4.2."""
+
     MIN_VERSION = '0.2.5'
     MAX_VERSION = '1.0'
     MIN_TASKWARRIOR_VERSION = '2.3'
