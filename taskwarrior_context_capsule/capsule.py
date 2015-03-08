@@ -4,7 +4,7 @@ from taskwarrior_capsules.data import BUILT_IN_COMMANDS
 
 
 class Context(CommandCapsule):
-    MIN_VERSION = '0.2.4'
+    MIN_VERSION = '0.2.5'
     MAX_VERSION = '1.0'
     MIN_TASKWARRIOR_VERSION = '2.3'
     MAX_TASKWARRIOR_VERSION = '2.4.1.99999'
@@ -30,16 +30,16 @@ class Context(CommandCapsule):
 
         self.configuration.write()
 
-    def preprocess(self, filter_args, extra_args, **kwargs):
+    def preprocess(self, filter_args, extra_args, command_name=None, **kwargs):
         try:
             context = self.configuration['current_context']
-            is_report = self.command_name not in BUILT_IN_COMMANDS
+            is_report = command_name not in BUILT_IN_COMMANDS
             if is_report and context:
                 context_filters = self._get_contexts()[context]
                 filter_args.append('(%s)' % context_filters)
         except KeyError:
             pass
-        return filter_args, extra_args, self.command_name
+        return filter_args, extra_args, command_name
 
     # Utility methods
 
