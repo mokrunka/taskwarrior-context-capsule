@@ -1,3 +1,6 @@
+Superseded by the main project, see https://taskwarrior.org/docs/context.html
+==========
+
 Taskwarrior Context Capsule
 ===========================
 
